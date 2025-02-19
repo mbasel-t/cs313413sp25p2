@@ -19,6 +19,7 @@ public class TestList {
   public void setUp() throws Exception {
     list = new ArrayList<Integer>();
     // TODO Question: Also try with a LinkedList - does it make any difference?
+    // Answer: No, the program behaves identically.
   }
 
   @After
@@ -77,7 +78,7 @@ public class TestList {
     list.add(55);
     list.add(77);
     list.add(66);
-    // TODO fix the expected values in the assertions below
+    // TODO fix the expected values in the assertions below [COMPLETE]
     assertEquals(7, list.size());
     assertEquals(1, list.indexOf(77));
     assertEquals(5, list.lastIndexOf(77));
@@ -96,6 +97,7 @@ public class TestList {
     list.add(77);
     list.add(6); //4
     list.remove(5); // TODO Question: What does this method do?
+                          // Answer: Removes the item at index 5
     // TODO fix the expected values in the assertions below [COMPLETE]
     assertEquals(6, list.size());
     assertEquals(1, list.indexOf(77));
@@ -103,6 +105,7 @@ public class TestList {
     assertEquals(4, list.get(2).intValue());
     assertEquals(77, list.get(3).intValue());
     list.remove(Integer.valueOf(5)); // TODO Question: What does this one do?
+                                        // Answer: Removes the first item with the value of 5
     assertEquals(5, list.size());
     assertEquals(1, list.indexOf(77));
     assertEquals(3, list.lastIndexOf(77));
